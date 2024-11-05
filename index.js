@@ -4,12 +4,16 @@ import puppeteer from 'puppeteer';
 const username = process.env.USERNAME;
 const password = process.env.PSWRD;
 
+// console.log(username, password);
+
 // Launch the browser and open a new blank page
 const browser = await puppeteer.launch({
         executablePath: "/usr/bin/brave",
         headless: false,
     }
 );
+
+
 const page = await browser.newPage();
 
 // Navigate the page to a URL.
