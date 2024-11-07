@@ -8,7 +8,7 @@ const password = process.env.PSWRD;
 
 // Launch the browser and open a new blank page
 const browser = await puppeteer.launch({
-        executablePath: "/usr/bin/brave",
+        executablePath: `${process.env.BRAVE_BROWSER}/bin/brave`,
         headless: false,
     }
 );
